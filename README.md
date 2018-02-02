@@ -1,7 +1,6 @@
 # Chest-Xvision
 HackerEarth DeepLearning Challenge for Classifying Chest X-ray images from NIH Dataset 
 
-
 ### Required Libraries -:
 Python : 3.5.2   
 Tensorflow : 1.3.0  
