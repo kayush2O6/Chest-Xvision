@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 from skimage import exposure
 
+
 def load_data(typ, img_size=256):
 	if typ=="train":
 		if os.path.exists("Xtrain.npy") and os.path.exists("XFtrain.npy") and os.path.exists("Ytrain.npy"):
@@ -41,8 +42,8 @@ def load_data(typ, img_size=256):
 			ag = float(ag/12.)
 		age_raw.append(ag)
 	age = np.array(age_raw, np.float32)/100.
-	gender_map = {'M':0,'F':1}
-	position_map = {0:0, 1:1}
+	gender_map = {'M':[0, 1],'F':[1, 0]}
+	position_map = {0:[0, 1], 1:[1, 0]}
 	gender = np.array([gender_map[str(g)] for g in labels['gender']], np.float32)
 	position = np.array([position_map[int(l)] for l in labels['view_position']], np.float32)
 	X_feature = np.column_stack((age, gender, position))
