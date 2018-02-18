@@ -5,7 +5,6 @@ HackerEarth DeepLearning Challenge for Classifying Chest X-ray images from NIH D
 ## Requirement Libraries -:
 ==========================
 	Python : 3.5.2
-	Keras : 2.1.2
 	Tensorflow : 1.3.0
 	Numpy : 1.13.1
 	Scikit-Learn : 0.19.0
